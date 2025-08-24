@@ -1,64 +1,52 @@
-# Statistical Comparison of Forecasting Models for Land Surface Temperature (LST) in Nigeria
+# Temporal Variation of Air Pollutants and Land Surface Temperature (2019–2024)
 
-The study assesses their predictive performance in forecasting **Land Surface Temperature (LST) across Nigerian states** using RMSE values.This repository contains data, scripts, and plots for the **statistical evaluation of three forecasting models**:
+This repository presents an analysis of the **seasonal and temporal variations of air pollutants**  
+(NO₂, CO, SO₂, O₃) and **Land Surface Temperature (LST)** across Nigeria from **January 2019 to December 2024**.  
 
-- **Curve Fit Forecast**
-- **Exponential Smoothing Forecast**
-- **Forest-Based Forecast**
-
-The study assesses their predictive performance in forecasting **Land Surface Temperature (LST) across Nigerian states** using RMSE values.
+The study highlights seasonal cycles, pollutant intensity levels, and the interactions between surface warming and ozone formation.
 
 ---
 
 ## 📂 Repository Structure
 
-- [**data/**](/data/) → # Input datasets (RMSE values
-- [**plot/**](datafile/) → # Generated figures (model performance heatmap, CD diagram, etc.) 
-- [**script/**](script/) → # Analysis scripts (Friedman test, Nemenyi post-hoc test, etc.)  
+- [**data/**](/data/) → # Input datasets (air pollutants, LST)
+- [**plots/**](plots/) → # Generated figures (temporal trend charts)
+- [**script/**](script/) → # Scripts for analysis and visualization  
 - [**README.md**](README.md) → # Project documentation
 
 ---
 
-# Statistical Analysis
+### Key Findings
+Nitrogen Dioxide (NO₂)
+- Exhibited a distinct seasonal cycle.
+- High intensity typically occurred in dry season months (November–March).
 
-To evaluate whether the models differed significantly in predictive performance:
+Sulfur Dioxide (SO₂)
+- Concentrations remained relatively constant over the study period.
+- No clear seasonal variation observed.
+- Occasional spikes likely caused by localized emissions or industrial events.
 
-### Friedman Test
-- **Chi-Square statistic**: 47.19  
-- **p-value**: < 0.0001  
+Carbon Monoxide (CO)
+- Showed a clear and consistent seasonal cycle.
+- High concentrations during the dry season.
+- Low concentrations during the wet season due to enhanced atmospheric dispersion.
 
-Strong rejection of the null hypothesis → Not all models performed equally.
+Ozone (O₃)
+- Seasonal maxima occurred between March–May.
+- Seasonal minima occurred between September–November.
+- Trends suggest a photochemical link between surface warming and ozone generation.
 
----
-
-### Nemenyi Post-Hoc Test
-
-| Model Comparison | p-value   | Significance |
-|------------------|-----------|--------------|
-| Curve Fit vs. Exponential Smoothing | 0.00000 | Significant |
-| Curve Fit vs. Forest-Based Forecast | 0.00000 | Significant |
-| Exponential Smoothing vs. Forest-Based Forecast | 0.18901 | Not significant |
-
----
-
-## Key Findings
-
-- **Curve Fit** performed **significantly worse** than both Exponential Smoothing and Forest-Based Forecast.  
-- **Exponential Smoothing** and **Forest-Based Forecast** showed **comparable performance** (no significant difference).  
-- Ensemble/advanced approaches (**Exponential Smoothing & Forest-Based**) are **more reliable for LST prediction** than Curve Fit.  
-
----
-
-## Critical Distance (CD) Diagram
-
-To visualize the average ranks and statistical significance, a **Critical Distance diagram** was generated using the Nemenyi test.  
-- The diagram shows that **Exponential Smoothing** and **Forest-Based Forecast** are statistically similar, while **Curve Fit** stands apart with worse performance.
+Land Surface Temperature (LST)
+- Showed consistent seasonal variation.
+- Peaks in the transitional months (March–April).
+- Troughs around the peak wet season (July–August).
+- Seasonal LST patterns appeared synchronized with O₃, supporting a photochemical connection.
 
 ---
 
 ## Output Visualizations
-- Heatmap of Nemenyi Post-Hoc Test → [View Here](plots/heatmap.png)
-- Critical Difference Diagram → [View Here](plots/Critical_Difference_Diagram.png)
+- Temporal trends of NO₂, SO₂, CO, and O₃ (2019–2024). → [View Here](plots/TrendChart_Pollutant.png)
+- Temporal trend of LST → [View Here](plots/TrendChart_LST.png)
 
 ---
 
@@ -66,7 +54,7 @@ To visualize the average ranks and statistical significance, a **Critical Distan
 
 If you use this repository, please cite it as:
 
-Waheeb, T.B.. (2025). Statistical Comparison of Forecasting Models for Land Surface Temperature (LST) in Nigeria. GitHub repository. 
+Waheeb, T.B.. (2025). Temporal Variation of Air Pollutants and Land Surface Temperature (2019–2024). GitHub repository. 
 
 ---
 
@@ -74,6 +62,6 @@ Waheeb, T.B.. (2025). Statistical Comparison of Forecasting Models for Land Surf
 
 Clone the repository:
    ```bash
-   git clone https://github.com/bherney/Statistical-Comparison-of-Forecasting-Models-for-Land-Surface-Temperature.git
-   cd Statistical-Comparison-of-Forecasting-Models-for-Land-Surface-Temperature
+   git clone https://github.com/bherney/Temporal-Variation-of-Air-Pollutants-and-Land Surface-Temperature-(2019–2024).git
+   cd Temporal-Variation-of-Air-Pollutants-and-Land Surface-Temperature-(2019–2024)
 
